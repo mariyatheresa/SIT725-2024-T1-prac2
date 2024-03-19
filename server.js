@@ -7,11 +7,15 @@ const port = 3300;
 app.get('/addTwoNumbers', (req,res) => {
     const n1 = Number(req.query.n1)
     const n2 = Number(req.query.n2)
-    res.send({"data": n1 + n2,
-    "message": "success",
-    "statuscode": 200
-    
-})
+    res.send({"sum": n1 + n2})
+
+});
+
+
+app.get('/subtractTwoNumbers', (req,res) => {
+    const n1 = Number(req.query.n1)
+    const n2 = Number(req.query.n2)
+    res.send({"difference": n1 - n2})
 
 });
 
